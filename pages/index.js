@@ -6,7 +6,7 @@ import styles from '@/styles/Home.module.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home({ title }) {
+export default function Home({ data }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -61,12 +61,20 @@ export default function Home({ title }) {
 };
 
 
-export function getServerSideProps() {
+//we need to make function asynchronous (async). 
+//Why? because we need to fetch it (making a promise), then we wait until promise is fulfilled.
+//asynchronous functions require the await function
+//add in async & await into function
+
+export async function getServerSideProps() {
+  const data =import('/data/data.json');
+  console.log(data);
   return {
     props: {
-      title: 'Hello everyone!',
+      data: events_categories,
     },
   };
+
 }
 
 
