@@ -26,7 +26,12 @@ export default function Home({ data }) {
       </header>
 
       <main className={styles.main}>
-        <a href="/events/ohio">
+        {data.map((ev) => <a key={ev.id} href={`/events/${ev.id}`}>
+          <Image src={ev.Image} /><h2>{ev.title}</h2><p>{ev.description}</p>
+        </a>)}
+
+
+        {/* <a href="/events/ohio">
           <img />
           <h2> Events in Ohio</h2>
           <p>
@@ -46,7 +51,7 @@ export default function Home({ data }) {
           <p>
             QCon. Create 2 other events.
           </p>
-        </a>
+        </a> */}
 
       </main>
 
@@ -61,14 +66,17 @@ export default function Home({ data }) {
 };
 
 
-//we need to make function asynchronous (async). 
-//Why? because we need to fetch it (making a promise), then we wait until promise is fulfilled.
-//asynchronous functions require the await function
-//add in async & await into function
+
+//we need to make function asynchronous or promise-based (async/await). 
+//We do that with async/await combo keywords
+/*In our return method, the events_categories array (in json file) 
+  was declared as our "data" property*/
+/*The data property was ran through our home page function 
+bringing in all of the information in the array*/
 
 export async function getServerSideProps() {
-  const data =import('/data/data.json');
-  console.log(data);
+  const { events_categories } = await import('/data/data.json');
+  console.log({ events_categories });
   return {
     props: {
       data: events_categories,
