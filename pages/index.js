@@ -27,7 +27,7 @@ export default function Home({ data }) {
 
       <main className={styles.main}>
         {data.map((ev) => <a key={ev.id} href={`/events/${ev.id}`}>
-          <Image src={ev.Image} /><h2>{ev.title}</h2><p>{ev.description}</p>
+          <Image width={200} height={100} alt={ev.title} src={ev.image} /><h2>{ev.title}</h2><p>{ev.description}</p>
         </a>)}
 
 
@@ -71,7 +71,7 @@ export default function Home({ data }) {
 //We do that with async/await combo keywords
 /*In our return method, the events_categories array (in json file) 
   was declared as our "data" property*/
-/*The data property was ran through our home page function 
+/*The data property was then ran through our home page function 
 bringing in all of the information in the array*/
 
 export async function getServerSideProps() {
