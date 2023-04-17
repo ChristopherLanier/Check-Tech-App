@@ -1,22 +1,23 @@
+ 
 {
   "events_categories": [
     {
       "id": "london",
       "title": "Events in London",
       "description": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem",
-      "image": "/Assets/london-skyline.jpg"
+      "image": "/images/london-skyline.jpg"
     },
     {
       "id": "ohio",
       "title": "Events in Ohio",
       "description": "corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate.",
-      "image": "/Assets/cincy-ohio-skyline.jpg"
+      "image": "/Images/cincy-ohio-skyline.jpg"
     },
     {
       "id": "dubai",
       "title": "Events in Dubai",
       "description": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscisfa.",
-      "image": "/Assets/Dubai-skyline.jpg"
+      "image": "/Images/Dubai-skyline-2.jpg"
     }
   ],
   "allEvents": [

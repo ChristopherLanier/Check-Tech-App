@@ -1,7 +1,9 @@
+
 .nav {
   display: flex;
   align-items: center;
   justify-content:center;
+  gap: 20px;
 }
 
 .main{
@@ -12,7 +14,8 @@ margin-top: 20vh;
 
 .footer{
 position: absolute;
-bottom: 10%;
+background-color: grey;
+padding: auto;
 }
  
 

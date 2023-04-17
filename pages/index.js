@@ -5,7 +5,9 @@ import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 
 const inter = Inter({ subsets: ['latin'] })
-
+///to pull in images, they must be stored locally in its own folder within public or SRC folder
+  //then the path must be ref. in the json file
+  //The public or SRC folder isnt reflected in path (in json file) but folder its contained in will be
 export default function Home({ data }) {
   return (
     <div className={styles.container}>
@@ -16,9 +18,8 @@ export default function Home({ data }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header>
+      <header> 
         <nav className={styles.nav}>
-          <img />
           <a href="/">Home</a>
           <a href="/events">Events</a>
           <a href="/about-us">About Us</a>
