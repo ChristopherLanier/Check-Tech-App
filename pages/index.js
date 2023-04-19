@@ -1,14 +1,14 @@
 import Head from 'next/head'
 import React from 'react'
 import Image from 'next/image'
-import { Inter } from 'next/font/google'
+import { Autour_One, Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 
 const inter = Inter({ subsets: ['latin'] })
 ///to pull in images, they must be stored locally in its own folder within public or SRC folder
   //then the path must be ref. in the json file
   //The public or SRC folder isnt reflected in path (in json file) but folder its contained in will be
-export default function Home({ data }) {
+  export default function Home({ data }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -28,7 +28,7 @@ export default function Home({ data }) {
 
       <main className={styles.main}>
         {data.map((ev) => <a key={ev.id} href={`/events/${ev.id}`}>
-          <Image width={200} height={100} alt={ev.title} src={ev.image} /><h2>{ev.title}</h2><p>{ev.description}</p>
+          <Image width={300} height={200} alt={ev.title} src={ev.image} /><h2>{ev.title}</h2><p>{ev.description}</p>
         </a>)}
 
 
@@ -69,12 +69,9 @@ export default function Home({ data }) {
 
 
 //we need to make function asynchronous or promise-based (async/await). 
-//We do that with async/await combo keywords
-/*In our return method, the events_categories array (in json file) 
-  was declared as our "data" property*/
-/*The data property was then ran through our home page function 
-bringing in all of the information in the array*/
 
+//We are in the client, hence needing "console.log" to view content and request info from server
+//Use getServerSideProps when we need content rendered current and uptodate
 export async function getServerSideProps() {
   const { events_categories } = await import('/data/data.json');
   console.log({ events_categories });
