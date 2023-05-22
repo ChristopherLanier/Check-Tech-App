@@ -5,9 +5,9 @@ import { Autour_One, Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 
 const inter = Inter({ subsets: ['latin'] })
-///to pull in images, they must be stored locally in its own folder within public or SRC folder
-//then the path must be ref. in the json file
-//The public or SRC folder isnt reflected in path (in json file) but folder its contained in will be
+///to pull in images, create folder images and drag-n-drop images in folder with '.jpg' extension or place them locally in folder
+//then the relative path must be ref. in the json file
+//Do not include "public" in the path
 export default function Home({ data }) {
   return (
     <div className={styles.container}>
@@ -68,9 +68,9 @@ export default function Home({ data }) {
 
 
 
-//we need to make function asynchronous or promise-based (async/await). 
 
-//We are in the client, hence needing "console.log" to view content and request info from server
+
+//we need to make function asynchronous or promise-based (async/await). 
 //Use getServerSideProps when we need content rendered current and uptodate
 export async function getServerSideProps() {
   const { events_categories } = await import('/data/data.json');
