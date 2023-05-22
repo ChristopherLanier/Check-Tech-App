@@ -1,23 +1,28 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
-const EventsCatPage = ({data}) => {
+//Link tags gives us the ability to do clientside navigation in the browser
+//creates smoother transitions between navigation
+//Link tags and anchor <a></a> have the same function except Link tags require the passHreg property while anchor tags dont
+const EventsCatPage = ({data, pageName}) => {
   return (
     <div>
-    <h1>Events in London</h1>
+    <h1>Events in {pageName}</h1>
 
         <div>
-          {data.map(ev => (
-           <a key={ev.id}href={`events/${ev.city}/${ev.id}`} >
-              <Image width={300} height={200} alt={ev.title} src={ev.image} />
-              <h2>{ev.title}</h2>
-              <p>{ev.description}</p>
-              </a> 
+          {data.map((ev) => (
+            <Link key={ev.id}href={`events/${ev.id}`} passHref>
+                <Image width={300} height={200} alt={ev.title} src={ev.image} />
+                <h2>{ev.title}</h2>
+                <p>{ev.description}</p>
+            </Link>
+               
           ))}
         </div>
     </div>
+  );                     
               
-   );                     
 }; 
             
              
@@ -56,7 +61,7 @@ export async function getStaticPaths(){
 
   const data = allEvents.filter((ev) => ev.city === id);
   console.log(data);
-  return {props: {data} };
+  return {props: {data, pageName: id} };
  }   
 
 //

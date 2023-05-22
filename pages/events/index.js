@@ -1,6 +1,7 @@
 //Can't declare images unless imports are brought in
 
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 const EventsPage = ({ data }) => {
@@ -9,9 +10,9 @@ const EventsPage = ({ data }) => {
       <h1>Events Page</h1>
       <div>
         {data.map((ev) => (
-          <a key={ev.id} href={`/events/${ev.id}`}>
+          <Link key={ev.id} href={`/events/${ev.id}`} passHref>
             <Image src={ev.image} alt={ev.title} width={300} height={100} /> <h2>{ev.title}</h2>
-          </a>
+          </Link>
         ))}
       </div>
     </div>
