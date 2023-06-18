@@ -26,13 +26,8 @@ const EventsCatPage = ({data, pageName}) => {
 }; 
             
              
-             
-            
-  
-
-
 export default EventsCatPage;
-
+             
 //1.These are functions that will Prerender our page with our data at buildtime vs. runtime with getServerSideProps
 //2.We are using DynamicRoutes so Nextjs has no way of knowing what paths (event 1,2,3,4 etc) to render
 //2 cont'd. getStaticPaths allows us to designate what page for Nextjs to render
@@ -47,13 +42,13 @@ export async function getStaticPaths(){
   });
  console.log(allPaths);
 
-  //VVV in case the user inputs an unrecognized path
+  /// in case the user inputs an unrecognized path
   return {
   paths: allPaths, 
-    fallback: false,
+    fallback: true,
   };
   };
-//^^^
+///
  export async function getStaticProps(context) {
   console.log(context);
   const id = context?.params.cat;
@@ -64,7 +59,12 @@ export async function getStaticPaths(){
   return {props: {data, pageName: id} };
  }   
 
-//
+//            
+  
+
+
+
+
 
   
 

@@ -9,10 +9,10 @@ const EventsPage = ({ data }) => {
     <div>
       <h1>Events Page</h1>
       <div>
-        {data.map((ev) => (
-          <Link key={ev.id} href={`/events/${ev.id}`} passHref>
+        {data.map((ev) => (<Link key={ev.id} href={`/events/${ev.id}`} passHref>
             <Image src={ev.image} alt={ev.title} width={300} height={100} /> <h2>{ev.title}</h2>
           </Link>
+          
         ))}
       </div>
     </div>

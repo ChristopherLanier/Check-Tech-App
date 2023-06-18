@@ -1,5 +1,5 @@
 
-
+import Image from 'next/image'
 
 const EventPage = ({data}) => {
   console.log(data);
@@ -33,12 +33,12 @@ export async function getStaticPaths() {
  
  /////////
 
- ///////// in case if user makes a request outside of whats reflected in app
+ //// in case if user makes a request outside of whats reflected in app
 return {
   paths: allPaths,
-  fallback: true,
+  fallback: 'blocking',
 };
-/////////
+////
 }
 
 //using getStaticProps we get access to context, which we'll use to extract the path
