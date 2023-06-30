@@ -1,14 +1,18 @@
-import Head from 'next/head'
-import React from 'react'
-import Image from 'next/image'
-import { Autour_One, Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
-import Link from 'next/link'
+import Head from 'next/head';
+import React from 'react';
+import { Autour_One, Inter } from 'next/font/google';
+import styles from '@/styles/Home.module.css';
+import Link from 'next/link';
+import { HomePage } from '@/src/components/home/home-page';
+import { Footer } from '@/src/components/footer/footer';
+import { Header } from '@/src/components/header/header';
 
 const inter = Inter({ subsets: ['latin'] })
-///to pull in images, create folder images and drag-n-drop images in folder with '.jpg' extension or place them locally in folder
-//then the relative path must be ref. in the json file
-//Do not include "public" in the path
+
+//From 'home-page.jsx' pass 'data' through 'HomePage' component tags
+//From 'footer.jsx' bring in 'Footer' tags
+//From 'header.jsx' bring in 'header' tags
+//This will render info in browser now
 export default function Home({ data }) {
   return (
     <div className={styles.container}>
@@ -19,40 +23,18 @@ export default function Home({ data }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header>
-        <nav className={styles.nav}>
-          <Link href="/" passHref>Home</Link>
-          <Link href="/events" passHref>Events</Link>
-          <Link href="/about-us" passHref>About Us</Link>
-        </nav>
-      </header>
-
-      <main className={styles.main}>
-        {data.map((ev) => <Link key={ev.id} href={`/events/${ev.id}`} passHref>
-          <Image width={300} height={200} alt={ev.title} src={ev.image} /><h2>{ev.title}</h2><p>{ev.description}</p>
-        </Link>)}
-      </main>
 
 
-        
+      <Header />
+      <HomePage data={data} />
+      <Footer />
 
-
-
-      <footer className={styles.footer}>
-        <p>© Events app footer </p>
-      </footer>
     </div>
-
 
   );
 };
 
 
-
-
-
-//we need to make function asynchronous or promise-based (async/await). 
-//Use getServerSideProps when we need content rendered current and uptodate
 export async function getServerSideProps() {
   const { events_categories } = await import('/data/data.json');
   console.log({ events_categories });
@@ -63,6 +45,12 @@ export async function getServerSideProps() {
   };
 
 }
+
+
+
+
+
+
 
 
 

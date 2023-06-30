@@ -1,4 +1,3 @@
-//Can't declare images unless imports are brought in
 
 import Image from 'next/image';
 import Link from 'next/link';
@@ -24,8 +23,7 @@ const EventsPage = ({ data }) => {
 }
 
 export default EventsPage;
-//Now that we are in server, This page is gonna need STATIC GENERATION of properties
-// or rendering upon build. Why? We dont need to constantly retrieve up-to-date information for this page
+
 export async function getStaticProps() {
   const { events_categories } = await import('/data/data.json');
   return {
