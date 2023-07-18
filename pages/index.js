@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import React from 'react';
 import { Autour_One, Inter } from 'next/font/google';
-import styles from '@/styles/Home.module.css';
 import Link from 'next/link';
 import { HomePage } from '@/src/components/home/home-page';
 import { Footer } from '@/src/components/footer/footer';
@@ -24,20 +23,11 @@ export default function Home({ data }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       
-      
       <HomePage data={data} />
+       </div>
 
-    </div>
-
-      
-      
-      
-
-   
-
-  );
+     );
 };
-
 
 export async function getServerSideProps() {
   const { events_categories } = await import('/data/data.json');
@@ -49,6 +39,15 @@ export async function getServerSideProps() {
   };
 
 }
+
+      
+      
+      
+
+   
+
+
+
 
 
 

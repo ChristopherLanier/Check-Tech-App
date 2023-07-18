@@ -1,14 +1,30 @@
 import React from 'react'
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const Header = () => {
   return (
     <header>
-    <nav>
-      <Link className="home" href="/" passHref>Home</Link>
-      <Link href="/events" passHref>Events</Link>
-      <Link href="/about-us" passHref>About Us</Link>
-    </nav>
-  </header>
+      <div className="topNav">
+        <Image src={'/images/logo-black.png'} width={150} height={150} />
+        <nav>
+          <ul>
+            <li>
+              <Link className="home" href="/" passHref>Home</Link>
+            </li>
+            <li>
+              <Link href="/events" passHref>Events</Link>
+            </li>
+            <li>
+              <Link href="/about-us" passHref>About Us</Link>
+            </li>
+          </ul>
+          </nav>
+          
+          
+        
+      </div>
+      <h1>title of our page</h1>
+    </header>
   )
 }
