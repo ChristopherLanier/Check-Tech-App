@@ -8,17 +8,21 @@ import Link from 'next/link';
 //in js file (pages index.js) of browser home page, import this pages component-> go to 'pages index.js'
 export const HomePage = ({data}) => {
   return (
-    <main>
+        <div classsName="home_body">
 
         {data.map((ev) => (
-            <Link key={ev.id} href={`/events/${ev.id}`} passHref>
-                <Image width={400} height={200} alt={ev.title} src={ev.image} />
-                <h2>{ev.title}</h2>
-                <p>{ev.description}</p>
+            <Link className="card" key={ev.id} href={`/events/${ev.id}`} passHref>
+                <Image className="img" width={400} height={200} alt={ev.title} src={ev.image} />
+
+                <div className="content">
+                  <h2>{ev.title}</h2>
+                  <p>{ev.description}</p>
+                </div>
+
             </Link> 
             
         ))}    
-    </main>   
+        </div>
   )
 }        
                    

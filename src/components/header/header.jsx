@@ -6,7 +6,7 @@ export const Header = () => {
   return (
     <header>
       <div className="topNav">
-        <Image src={'/images/logo-black.png'} width={150} height={150} />
+        <Image className="checkTapLogo" src={'/images/logo-black.png'} width={150} height={150} />
         <nav>
           <ul>
             <li>
@@ -19,8 +19,8 @@ export const Header = () => {
               <Link href="/about-us" passHref>About Us</Link>
             </li>
           </ul>
-          </nav>
           
+        </nav> 
           
         
       </div>
