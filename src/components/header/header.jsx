@@ -5,7 +5,8 @@ import Image from 'next/image';
 export const Header = () => {
   return (
     <header>
-      <div className="topNav">
+      <div className="wrapper">
+        <div className="topNav">
         <Image className="checkTapLogo" src={'/images/logo-black.png'} width={150} height={150} />
         <nav>
           <ul>
@@ -19,12 +20,14 @@ export const Header = () => {
               <Link href="/about-us" passHref>About Us</Link>
             </li>
           </ul>
-          
         </nav> 
+      </div>
+      <h1>title of our page</h1> 
+      </div>
+     
+    </header>
+          
           
         
-      </div>
-      <h1>title of our page</h1>
-    </header>
   )
 }

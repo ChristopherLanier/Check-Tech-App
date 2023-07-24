@@ -1,10 +1,17 @@
 header
-    height: 300px
-    padding: 20px
+    height: 250px
     background: linear-gradient(250deg, #1a7f98, transparent)
-    display: flex
-    flex-direction: column
-    justify-content: space-between
+    
+    
+
+    .wrapper
+        display: flex
+        flex-direction: column
+        justify-content: center
+        padding: 20px
+        width: 100%
+        max-width: 1200px //max-width caps viewport
+        margin: auto
 
     h1  
        width: 50%
@@ -12,11 +19,9 @@ header
        text-transform: uppercase 
        
        
-
     .checkTapLogo
         border-radius:100%
-        
-   
+     
     .topNav
         display: flex
         justify-content: space-between
@@ -27,10 +32,17 @@ header
             text-decoration: none
             list-style: none
             gap: 15px
+            
 
             li
                 font-weight: 600
-                font-size: 16px
+                font-size: 16px    
+       
+       
+
+     
+   
+    
 
 footer
     font-weight: bold
@@ -38,7 +50,7 @@ footer
 
 main
     width: 100%
-    max-width: 1450px //max-width caps viewport
+    max-width: 1250px //max-width caps viewport
     margin: auto
     padding: 30px
 
@@ -57,6 +69,8 @@ main
          justify-content: center
          align-content: center
          align-items: center
+         &:nth-child(even)
+            direction: rtl
 
     .content
             width: 50%

@@ -29,6 +29,7 @@ export default function Home({ data }) {
      );
 };
 
+//data property constructred in getServerSideProps is ran through both "HomPage" tag above and component in "home-page.jsx"
 export async function getServerSideProps() {
   const { events_categories } = await import('/data/data.json');
   console.log({ events_categories });

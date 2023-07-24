@@ -12,7 +12,7 @@ export const HomePage = ({data}) => {
 
         {data.map((ev) => (
             <Link className="card" key={ev.id} href={`/events/${ev.id}`} passHref>
-                <Image className="img" width={400} height={200} alt={ev.title} src={ev.image} />
+                <Image className="img" width={500} height={200} alt={ev.title} src={ev.image} />
 
                 <div className="content">
                   <h2>{ev.title}</h2>
@@ -24,7 +24,7 @@ export const HomePage = ({data}) => {
         ))}    
         </div>
   )
-}        
+}         
                    
 
 
