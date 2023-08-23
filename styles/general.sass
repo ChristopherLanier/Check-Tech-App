@@ -53,6 +53,7 @@ main
     max-width: 1250px //max-width caps viewport
     margin: auto
     padding: 30px
+    min-height: 550px
 
     .home_body
         display: flex
@@ -69,8 +70,8 @@ main
          justify-content: center
          align-content: center
          align-items: center
-         &:nth-child(even)
-            direction: rtl
+         &:nth-child(even)  
+            direction: rtl  //content within 'card' container has even offset right to left
 
     .content
             width: 50%

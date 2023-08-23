@@ -9,8 +9,6 @@ import { Header } from '@/src/components/header/header';
 const inter = Inter({ subsets: ['latin'] })
 
 //From 'home-page.jsx file' pass 'data' through 'HomePage' component tags
-//From 'footer.jsx file' bring in 'Footer' tags
-//From 'header.jsx file' bring in 'header' tags
 
 //This will render info in browser now
 export default function Home({ data }) {
