@@ -15,7 +15,7 @@ export const HomePage = ({data}) => {
                 <Image className="img" width={500} height={200} alt={ev.title} src={ev.image} />
 
                 <div className="content">
-                  <h2>{ev.title}</h2>
+                  <h2 className="contentHeader">{ev.title}</h2>
                   <p>{ev.description}</p>
                 </div>
 

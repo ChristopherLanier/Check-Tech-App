@@ -9,7 +9,7 @@ const AboutUsPage = () => {
     <div>
       <h1>About Us Page</h1>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+        My name is Christopher Lanier and I'm in the beginning of my Software Engineering journey. I drew inspiration for creating this app from the need for junior developers like myself to remain connected and up-to-date on events occurring within the tech community. My fur child has always been a source of support and laughter throughout my journey, so I wanted to shout him out and show him some love!
       </p>
       <Image src={'/images/chris-picture.png'} width={300} height={300} />
     </div>

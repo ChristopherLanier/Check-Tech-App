@@ -43,6 +43,7 @@ export async function getStaticPaths(){
     fallback: true,
   };
   };
+  
 ///
  export async function getStaticProps(context) {
   console.log(context);

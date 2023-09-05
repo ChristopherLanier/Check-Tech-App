@@ -22,7 +22,6 @@ export const Header = () => {
           </ul>
         </nav> 
       </div>
-      <h1>title of our page</h1> 
       </div>
      
     </header>

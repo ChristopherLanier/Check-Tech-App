@@ -36,7 +36,7 @@ header
 
             li
                 font-weight: 600
-                font-size: 16px    
+                font-size: 25px    
        
        
 
@@ -64,6 +64,7 @@ main
         height: 50%   
         
     .card
+        
          display: flex
          flex-direction: row  
          gap: 30px
@@ -74,8 +75,22 @@ main
             direction: rtl  //content within 'card' container has even offset right to left
 
     .content
-            width: 50%
-       
+        width: 50%
 
+    .contentHeader
+        text-decoration: underline
+        
 
-    
+    .eventsPage
+        display: flex
+        flex-direction: roll
+        gap: 20px
+        .eventCard
+            position: relative
+            h2: absolute
+            text-align: center
+            font-size:30px
+            border: 2px solid #000
+            padding: 10px
+            top: 15%
+            right: 50%
