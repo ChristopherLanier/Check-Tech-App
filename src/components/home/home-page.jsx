@@ -18,8 +18,8 @@ export const HomePage = ({data}) => {
                   <h2 className="contentHeader">{ev.title}</h2>
                   <p>{ev.description}</p>
                 </div>
-
             </Link> 
+
             
         ))}    
         </div>

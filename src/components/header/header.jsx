@@ -7,11 +7,11 @@ export const Header = () => {
     <header>
       <div className="wrapper">
         <div className="topNav">
-        <Image className="checkTapLogo" src={'/images/logo-black.png'} width={150} height={150} />
+        <Image className="checkTapLogo" alt="checkTech"src={'/images/logo-black.png'} width={150} height={150} />
         <nav>
           <ul>
             <li>
-              <Link className="home" href="/" passHref>Home</Link>
+              <Link href="/" passHref><Image src='/images/home-favicon.png' alt="homebtn" height={30}width={30}></Image></Link>
             </li>
             <li>
               <Link href="/events" passHref>Events</Link>

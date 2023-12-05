@@ -1,10 +1,9 @@
 import Head from 'next/head';
 import React from 'react';
-import { Autour_One, Inter } from 'next/font/google';
-import Link from 'next/link';
+import {Inter } from 'next/font/google';
 import { HomePage } from '@/src/components/home/home-page';
-import { Footer } from '@/src/components/footer/footer';
-import { Header } from '@/src/components/header/header';
+
+
 
 const inter = Inter({ subsets: ['latin'] })
 
